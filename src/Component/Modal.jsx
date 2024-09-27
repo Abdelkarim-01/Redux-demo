@@ -1,4 +1,4 @@
-import { hidModal,showModal} from '../features/modal/modalSlice';
+import { hidModal} from '../features/modal/modalSlice';
 import { useDispatch } from 'react-redux';
 import { clearCarts } from "../features/cart/cartSlice";
 
