@@ -1,7 +1,7 @@
 import CartItem from "./CartItem"
 import { useSelector ,useDispatch} from "react-redux"
-import { clearCarts } from "../features/cart/cartSlice";
-import { hidModal, showModal } from "../features/modal/modalSlice";
+
+import { showModal } from "../features/modal/modalSlice";
 
 const CartContainer = () => {
     const { cartItems, amount, total}=useSelector((store)=>store.cart) ;
@@ -36,7 +36,7 @@ const CartContainer = () => {
                     Total <span>${total.toFixed(2)}</span>
                 </h4>
             </div>
-            <button className="btn clear-btn" onClick={()=>dispatch(clearCarts())}>clear cart</button>
+            <button className="btn clear-btn" onClick={()=>dispatch(showModal())}>clear cart</button>
         </footer>
     </section>
   )
